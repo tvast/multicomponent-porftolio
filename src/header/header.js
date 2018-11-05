@@ -1,50 +1,46 @@
 import React, { Component } from 'react';
+import resumeData from '../resumeData';
+
 export default class Header extends Component {
   render() {
     return (
       <React.Fragment>
       {/*generated code*/}
-      <header className="s-header">
-        <div className="header-logo">
-          <a className="site-logo" href="index.html">
-            <img src="images/logo.svg" alt="Homepage" />
-          </a>
-        </div> {/* end header-logo */}
-        <nav className="header-nav">
-          <a href="#0" className="header-nav__close" title="close"><span>Close</span></a>
-          <h3>Navigate to</h3>
-          <div className="header-nav__content">
-            <ul className="header-nav__list">
-              <li><a className="smoothscroll" href="#home" title="home">Home</a></li>
-              <li><a className="smoothscroll" href="#about" title="about">About</a></li>
-              <li><a className="smoothscroll" href="#services" title="services">Services</a></li>
-              <li><a className="smoothscroll" href="#works" title="works">Works</a></li>
-              <li><a className="smoothscroll" href="#contact" title="contact">Contact</a></li>
-            </ul>
-            <p>Perspiciatis hic praesentium nesciunt. Et neque a dolorum <a href="#0">voluptatem</a> porro iusto sequi veritatis libero enim. Iusto id suscipit veritatis neque reprehenderit.</p>
-            <ul className="header-nav__social">
-              <li>
-                <a href="#0"><i className="fab fa-facebook" /></a>
-              </li>
-              <li>
-                <a href="#0"><i className="fab fa-twitter" /></a>
-              </li>
-              <li>
-                <a href="#0"><i className="fab fa-instagram" /></a>
-              </li>
-              <li>
-                <a href="#0"><i className="fab fa-behance" /></a>
-              </li>
-              <li>
-                <a href="#0"><i className="fab fa-dribbble" /></a>
-              </li>
-            </ul>
-          </div> {/* end header-nav__content */}
-        </nav> {/* end header-nav */}
-        <a className="header-menu-toggle" href="#0">
-          <span className="header-menu-icon" />
-        </a>
-      </header>
+      <header id="home">
+  <nav id="nav-wrap">
+    <a className="mobile-btn" href="#nav-wrap" title="Show navigation">Show navigation</a>
+    <a className="mobile-btn" href="#" title="Hide navigation">Hide navigation</a>
+    <ul id="nav" className="nav">
+      <li className="current"><a className="smoothscroll" href="#home">Home</a></li>
+      <li><a className="smoothscroll" href="#about">About</a></li>
+      <li><a className="smoothscroll" href="#resume">Resume</a></li>
+      <li><a className="smoothscroll" href="#portfolio">Works</a></li>
+      <li><a className="smoothscroll" href="#testimonials">Testimonials</a></li>
+      <li><a className="smoothscroll" href="#contact">Contact</a></li>
+    </ul> {/* end #nav */}
+  </nav> {/* end #nav-wrap */}
+  <div className="row banner">
+    <div className="banner-text">
+      <h1 className="responsive-headline">I m {resumeData.name}.</h1>
+      <h3>I'm a Manila based <span>graphic designer</span>, <span>illustrator</span> and <span>webdesigner</span> creating awesome and
+        effective visual identities for companies of all sizes around the globe. Let's <a className="smoothscroll" href="#about">start scrolling</a>
+        and learn more <a className="smoothscroll" href="#about">about me</a>.</h3>
+      <hr />
+      <ul className="social">
+        <li><a href="#"><i className="fa fa-facebook" /></a></li>
+        <li><a href="#"><i className="fa fa-twitter" /></a></li>
+        <li><a href="#"><i className="fa fa-google-plus" /></a></li>
+        <li><a href="#"><i className="fa fa-linkedin" /></a></li>
+        <li><a href="#"><i className="fa fa-instagram" /></a></li>
+        <li><a href="#"><i className="fa fa-dribbble" /></a></li>
+        <li><a href="#"><i className="fa fa-skype" /></a></li>
+      </ul>
+    </div>
+  </div>
+  <p className="scrolldown">
+    <a className="smoothscroll" href="#about"><i className="icon-down-circle" /></a>
+  </p>
+</header>
       </React.Fragment>
     );
   }
